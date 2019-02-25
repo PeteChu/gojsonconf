@@ -6,7 +6,7 @@ import (
 	"os"
 )
 
-func ReadJsonConfig(path string, t interface{}) {
+func GetConfig(path string, t interface{}) {
 	file, _ := os.Open(path)
 	defer file.Close()
 	decoder := json.NewDecoder(file)
