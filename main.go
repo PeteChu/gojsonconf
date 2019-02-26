@@ -2,16 +2,13 @@ package gojsonconf
 
 import (
 	"encoding/json"
-	"fmt"
 	"os"
 )
 
-func GetConfig(path string, t interface{}) {
+func GetConfig(path string, configuration interface{}) (err error) {
 	file, _ := os.Open(path)
 	defer file.Close()
 	decoder := json.NewDecoder(file)
-	err := decoder.Decode(&t)
-	if err != nil {
-		fmt.Printf("%v", err)
-	}
+	err = decoder.Decode(&configuration)
+	return
 }
