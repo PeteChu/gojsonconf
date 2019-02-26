@@ -33,7 +33,10 @@ type Conf Struct {
 }
 
 conf := Conf{}
-gojsonconf.GetConfig("conf.json", &conf)
+err := gojsonconf.GetConfig("conf.json", &conf)
+if err != nil {
+  // do something
+}
 
 fmt.Println(conf.Port) // 3000
 fmt.Println(conf.Host) // example.com
@@ -61,7 +64,10 @@ type Conf Struct {
 }
 
 conf := Conf{}
-gojsonconf.GetConfig("conf.json", &conf)
+err := gojsonconf.GetConfig("conf.json", &conf)
+if err != nil {
+  // do something
+}
 
 fmt.Println(conf.Port) // 3000
 fmt.Println(conf.Host) // example.com
