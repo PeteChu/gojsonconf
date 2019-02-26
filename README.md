@@ -33,7 +33,7 @@ type Conf Struct {
 }
 
 conf := Conf{}
-gojsonconf.ReadJsonConfig("conf.json", &conf)
+gojsonconf.GetConfig("conf.json", &conf)
 
 fmt.Println(conf.Port) // 3000
 fmt.Println(conf.Host) // example.com
@@ -61,7 +61,7 @@ type Conf Struct {
 }
 
 conf := Conf{}
-gojsonconf.ReadJsonConfig("conf.json", &conf)
+gojsonconf.GetConfig("conf.json", &conf)
 
 fmt.Println(conf.Port) // 3000
 fmt.Println(conf.Host) // example.com
